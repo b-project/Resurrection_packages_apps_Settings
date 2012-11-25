@@ -38,10 +38,14 @@ import android.content.res.TypedArray;
 import android.content.res.XmlResourceParser;
 import android.nfc.NfcAdapter;
 import android.nfc.Tag;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.Process;
+import android.os.PowerManager;
+import android.os.RemoteException;
+import android.os.ServiceManager;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.preference.Preference;
@@ -1286,6 +1290,7 @@ public class SettingsActivity extends Activity
                 android.os.Build.TYPE.equals("eng") || android.os.Build.TYPE.equals("userdebug"));
 
         final UserManager um = (UserManager) getSystemService(Context.USER_SERVICE);
+        final PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
 
         final int size = target.size();
         for (int i = 0; i < size; i++) {
@@ -1368,15 +1373,10 @@ public class SettingsActivity extends Activity
                     if (!supported) {
                         removeTile = true;
                     }
-					}else if (id == R.id.kernel_adiutor) {
-                    boolean supported = false;
-                    try {
-                        supported = (getPackageManager().getPackageInfo("com.grarak.kerneladiutor", 0).versionCode > 0);
-                    } catch (PackageManager.NameNotFoundException e) {
-                    }
-                    if (!supported) {
+                } else if (id == R.id.performance_settings) {
+                    if (!(pm.hasPowerProfiles() || (showDev && !Build.TYPE.equals("user")))) {
                         removeTile = true;
-                   }
+                    }
                 }
 
                 if (UserHandle.MU_ENABLED && UserHandle.myUserId() != 0
