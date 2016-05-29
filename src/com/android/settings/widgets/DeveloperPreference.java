@@ -39,7 +39,7 @@ import java.security.NoSuchAlgorithmException;
 public class DeveloperPreference extends Preference {
 
     private static final String TAG = "DeveloperPreference";
-    public static final String GRAVATAR_API = "http://www.gravatar.com/avatar/";
+    public static final String GRAVATAR_API = "https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xla1/v/t1.0-9/12400916_862270710559401_6061079946266977754_n.jpg?oh=672a9a497deb5954d92882bc26614cc3&oe=57D0C2D1&__gda__=1472756092_270e125036d9486cdd57d55f1369ae64";
     public static int mDefaultAvatarSize = 200;
     private ImageView gplusButton;
     private ImageView donateButton;
@@ -112,7 +112,7 @@ public class DeveloperPreference extends Preference {
 
 			if (gplusName != null) {
 
-	                    Uri gplusURL = Uri.parse("https://plus.google.com/+" + gplusName);
+	                    Uri gplusURL = Uri.parse("https://www.facebook.com/groups/xdavncom");
         	            final Intent intent = new Intent(Intent.ACTION_VIEW, gplusURL);
         	            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
         	            getContext().startActivity(intent);

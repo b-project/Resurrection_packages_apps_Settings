@@ -9,7 +9,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.util.Log;
 
-import cyanogenmod.providers.DataUsageContract;
+import bluros.providers.DataUsageContract;
 
 
 /**
@@ -114,7 +114,7 @@ public class DataUsageUtils {
 
     public static void enableDataUsageService(Context context, boolean enable) {
         Intent intent = new Intent();
-        intent.setAction("org.cyanogenmod.providers.datausage.enable");
+        intent.setAction("org.bluros.providers.datausage.enable");
         intent.putExtra("enable", enable);
         context.sendBroadcast(intent);
     }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2012 The CyanogenMod Project
+ * Copyright (C) 2012 The BlurOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,11 +29,11 @@ import android.view.MenuItem;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.cyanogenmod.CMSystemSettingSwitchPreference;
+import com.android.settings.bluros.CMSystemSettingSwitchPreference;
 
-import cyanogenmod.providers.CMSettings;
+import bluros.providers.CMSettings;
 
-import org.cyanogenmod.internal.logging.CMMetricsLogger;
+import org.bluros.internal.logging.CMMetricsLogger;
 
 public class BatteryLightSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -74,7 +74,7 @@ public class BatteryLightSettings extends SettingsPreferenceFragment implements
         mPulseEnabledPref = (CMSystemSettingSwitchPreference) prefSet.findPreference(PULSE_ENABLED_PREF);
 
         if (!getResources().getBoolean(com.android.internal.R.bool.config_ledCanPulse) ||
-                getResources().getBoolean(org.cyanogenmod.platform.internal.R.bool.config_useSegmentedBatteryLed)) {
+                getResources().getBoolean(org.bluros.platform.internal.R.bool.config_useSegmentedBatteryLed)) {
             mGeneralPrefs.removePreference(mPulseEnabledPref);
         }
 

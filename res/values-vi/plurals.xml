@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="backlight_timeout_time">
+        <item quantity="other">%d giây</item>
+    </plurals>
+    <plurals name="app_ops_count">
+        <item quantity="other">%d lần</item>
+    </plurals>
+	<plurals name="show_dev_countdown_cm">
+        <item quantity="other">Bạn còn %1$d bước để bật cài đặt nhà phát triển..</item>
+        <item quantity="one">Bạn còn %1$d bước để bật cài đặt nhà phát triển.</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Bạn còn %1$d bước để bật lựa chọn nhà phát triển.</item>
+        <item quantity="one">Bạn còn %1$d bước để bật lựa chọn nhà phát triển.</item>
+    </plurals>
+    <plurals name="security_settings_fingerprint_preference_summary">
+        <item quantity="other">thiết lập %1$d dấu vân tay</item>
+        <item quantity="one">thiết lập %1$d dấu vân tay</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Mật khẩu phải chứa ít nhất %d chữ.</item>
+        <item quantity="one">Mật khẩu phải chứa ít nhất 1 chữ.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Mật khẩu phải chứa ít nhất least %d chữ thường.</item>
+        <item quantity="one">Mật khẩu phải chứa ít nhất 1 chữ thường.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Mật khẩu phải chứa ít nhấtt %d chữ hoa.</item>
+        <item quantity="one">Mật khẩu phải chứa ít nhất 1 chữ hoa.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Mật khẩu phải chứa ít nhất %d chữ số.</item>
+        <item quantity="one">Mật khẩu phải chứa ít nhất 1 chữ số.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Mật khẩu phải chứa ít nhất %d ký tự đặc biệt.</item>
+        <item quantity="one">Mật khẩu phải chứa ít nhất 1 ký tự đặc biệt.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Mật khẩu phải chứa ít nhất %d ký tự không phải chữ.</item>
+        <item quantity="one">Mật khẩu phải chứa ít nhất 1 ký tự không phải chữ.</item>
+    </plurals>
+    <plurals name="wrong_pin_code">
+        <item quantity="other">Không đúng mã PIN SIM, bạn có %d lần thử còn lại.</item>
+        <item quantity="one">Không đúng mã PIN SIM, bạn có %d lần thử còn lại trước khi bạn phải liên lạc với hãng để mở khóa thiết bị của bạn.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d ứng dụng có thể đọc thông báo</item>
+        <item quantity="one">%d ứng dụng có thể đọc thông báo</item>
+    </plurals>
+    <plurals name="zen_mode_summary_alarms_only_by_minute">
+        <item quantity="other">Thay đổi báo động chỉ trong %1$d phút (cho đến khi %2$s)</item>
+        <item quantity="one">Thay đổi báo động chỉ trong một phút cho đến khi %2$s</item>
+    </plurals>
+    <plurals name="zen_mode_summary_alarms_only_by_hour">
+        <item quantity="other">Thay đổi báo động chỉ trong %1$d giờ cho đến khi %2$s</item>
+        <item quantity="one">Thay đổi báo động chỉ trong một giờ cho đến khi %2$s</item>
+    </plurals>
+    <plurals name="permissions_summary">
+        <item quantity="other">%d quyền được cấp</item>
+        <item quantity="one">%d quyền được cấp</item>
+    </plurals>
+    <plurals name="runtime_permissions_summary">
+        <item quantity="other">%1$d / %2$d quyền được cấp</item>
+        <item quantity="one">%1$d / %2$d quyền được cấp</item>
+    </plurals>
+    <plurals name="runtime_permissions_additional_count">
+        <item quantity="other">%d quyền bổ sung</item>
+        <item quantity="one">%d quyền bổ sung</item>
+    </plurals>
+    <plurals name="domain_urls_apps_summary">
+        <item quantity="other">%d ứng dụng có thể mở các liên kết hỗ trợ của nó</item>
+        <item quantity="zero">Không có ứng dụng có thể mở bất kỳ liên kết được hỗ trợ</item>
+        <item quantity="one">Một ứng dụng có thể mở các liên kết hỗ trợ của nó</item>
+    </plurals>
+    <plurals name="high_power_count">
+        <item quantity="other">%d ứng dụng được phép bỏ qua tối ưu hóa pin</item>
+        <item quantity="one">1 ứng dụng được phép bỏ qua tối ưu hóa pin</item>
+    </plurals>
+    <plurals name="memory_usage_apps_summary">
+        <item quantity="other">%1$d ứng dụng sử dụng bộ nhớ trong %2$s trước</item>
+        <item quantity="one">1 ứng dụng sử dụng bộ nhớ trong %2$s trước</item>
+    </plurals>
+</resources>

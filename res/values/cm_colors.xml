@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-Copyright (C) 2015 The CyanogenMod Project
+Copyright (C) 2015 The BlurOS Project
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ limitations under the License.
 
     <!-- Hard coded background and text colors exposed for better theme support -->
     <color name="background_color_darker_gray">@android:color/darker_gray</color>
-    <color name="background_color_gray">#ddd</color>
+    <color name="background_color_gray">@android:color/white</color>
     <color name="background_color_holo_blue_light">@android:color/holo_blue_light</color>
     <color name="background_color_transparent">@android:color/transparent</color>
     <color name="background_color_white">@android:color/white</color>

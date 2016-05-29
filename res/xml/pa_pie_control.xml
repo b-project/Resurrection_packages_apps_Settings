@@ -18,7 +18,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/pa_pie_control_title">
 
-    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+    <com.android.settings.bluros.SystemSettingSwitchPreference
         android:key="pa_pie_state"
         android:title="@string/pa_pie_control_enable_title"
         android:defaultValue="false" />
@@ -26,17 +26,17 @@
     <PreferenceScreen
         android:key="pa_pie_targets"
         android:title="@string/pa_pie_targets_title"
-        android:fragment="com.android.settings.rr.Pie.PieTargets"
+        android:fragment="com.android.settings.bluros.Pie.PieTargets"
         android:dependency="pa_pie_state" />
 
     <PreferenceScreen
         android:key="pa_pie_color"
         android:title="@string/pa_pie_color_title"
-        android:fragment="com.android.settings.rr.Pie.PieColor"
+        android:fragment="com.android.settings.bluros.Pie.PieColor"
         android:dependency="pa_pie_state" />
 
 
-   <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+   <com.android.settings.bluros.SystemSettingSwitchPreference
             android:key="pa_pie_always_right"
             android:title="@string/pa_pie_always_right_title"
             android:summary="@string/pa_pie_always_right_summary"

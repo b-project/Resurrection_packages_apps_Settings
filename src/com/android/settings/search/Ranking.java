@@ -25,7 +25,7 @@ import com.android.settings.DeviceInfoSettings;
 import com.android.settings.DisplaySettings;
 import com.android.settings.HomeSettings;
 import com.android.settings.LegalSettings;
-import com.android.settings.rr.MainSettings;
+import com.android.settings.bluros.MainSettings;
 import com.android.settings.PrivacySettings;
 import com.android.settings.ScreenPinningSettings;
 import com.android.settings.SecuritySettings;
@@ -36,7 +36,7 @@ import com.android.settings.accessibility.AccessibilitySettings;
 import com.android.settings.applications.AdvancedAppSettings;
 import com.android.settings.applications.ManageDefaultApps;
 import com.android.settings.bluetooth.BluetoothSettings;
-import com.android.settings.cyanogenmod.StatusBarSettings;
+import com.android.settings.bluros.StatusBarSettings;
 import com.android.settings.deviceinfo.StorageSettings;
 import com.android.settings.fuelgauge.PowerUsageSummary;
 import com.android.settings.inputmethod.InputMethodAndLanguageSettings;
@@ -50,28 +50,28 @@ import com.android.settings.notification.ZenModeAutomationSettings;
 import com.android.settings.notification.ZenModePrioritySettings;
 import com.android.settings.notification.ZenModeSettings;
 import com.android.settings.print.PrintSettingsFragment;
-import com.android.settings.rr.LockScreenSettings;
-import com.android.settings.rr.MiscSettings;
-import com.android.settings.rr.animation.AnimationSettings;
-import com.android.settings.rr.RecentsSettings;
-import com.android.settings.rr.ClockSettings;
-import com.android.settings.rr.NotificationDrawerSettings;
-import com.android.settings.rr.CustomHeader;
-import com.android.settings.rr.FlingSettings;
-import com.android.settings.rr.Header;
-import com.android.settings.rr.HeaderColors;
-import com.android.settings.rr.HeaderFonts;
-import com.android.settings.rr.LockScreenGestures;
-import com.android.settings.rr.LockScreenMedia;
-import com.android.settings.rr.LockscreenUI;
-import com.android.settings.rr.Navbar;
-import com.android.settings.rr.NotificationColorSettings;
-import com.android.settings.rr.PulseSettings;
-import com.android.settings.rr.QsColors;
-import com.android.settings.rr.QsPanel;
-import com.android.settings.rr.RecentsStyles;
-import com.android.settings.rr.SmartbarSettings;
-import com.android.settings.rr.StatusBarColors;
+import com.android.settings.bluros.LockScreenSettings;
+import com.android.settings.bluros.MiscSettings;
+import com.android.settings.bluros.animation.AnimationSettings;
+import com.android.settings.bluros.RecentsSettings;
+import com.android.settings.bluros.ClockSettings;
+import com.android.settings.bluros.NotificationDrawerSettings;
+import com.android.settings.bluros.CustomHeader;
+import com.android.settings.bluros.FlingSettings;
+import com.android.settings.bluros.Header;
+import com.android.settings.bluros.HeaderColors;
+import com.android.settings.bluros.HeaderFonts;
+import com.android.settings.bluros.LockScreenGestures;
+import com.android.settings.bluros.LockScreenMedia;
+import com.android.settings.bluros.LockscreenUI;
+import com.android.settings.bluros.Navbar;
+import com.android.settings.bluros.NotificationColorSettings;
+import com.android.settings.bluros.PulseSettings;
+import com.android.settings.bluros.QsColors;
+import com.android.settings.bluros.QsPanel;
+import com.android.settings.bluros.RecentsStyles;
+import com.android.settings.bluros.SmartbarSettings;
+import com.android.settings.bluros.StatusBarColors;
 import com.android.settings.sim.SimSettings;
 import com.android.settings.users.UserSettings;
 import com.android.settings.wifi.AdvancedWifiSettings;
@@ -164,7 +164,7 @@ public final class Ranking {
         // Home
         sRankMap.put(HomeSettings.class.getName(), RANK_HOME);
         
-        // Resurrection
+        // BlurOS
         sRankMap.put(MainSettings.class.getName(), RANK_RR);
         
         // Display

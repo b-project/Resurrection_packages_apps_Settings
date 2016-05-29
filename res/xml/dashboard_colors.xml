@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright (C) 2014 The CyanogenMod Project
+<!-- Copyright (C) 2014 The BlurOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -32,13 +32,13 @@
                 android:summary="@string/dashboard_columns_summary"
                 android:persistent="false" />
 
-	<com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+	<com.android.settings.bluros.SystemSettingSwitchPreference
                 android:key="dashboard_tileview_double_lines"
                 android:title="@string/dashboard_tileview_double_lines_title"
  		android:summary="@string/dashboard_tileview_double_lines_summary"
                 android:defaultValue="false" />
 	 
-        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        <com.android.settings.bluros.SystemSettingSwitchPreference
                 android:key="dashboard_tileview_dividers"
                 android:title="@string/dashboard_tileview_dividers_title"
                 android:summary="@string/dashboard_tileview_dividers_summary"
@@ -58,7 +58,7 @@
 <PreferenceCategory
         android:title="@string/db_colors" >
   
-    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+    <com.android.settings.bluros.SystemSettingSwitchPreference
         android:key="db_custom_colors"
         android:title="@string/db_custom_colors"
         android:summary="@string/db_custom_colors_summary"
@@ -88,7 +88,7 @@
        android:dependency="db_custom_colors"/>
      
      
-     <com.android.settings.rr.SeekBarPreferenceCham
+     <com.android.settings.bluros.SeekBarPreferenceCham
        android:key="settings_category_text_size"
        android:title="@string/dash_category_text_size"
        android:max="25"
@@ -98,7 +98,7 @@
        settings:unitsRight="dp" 
        android:dependency="db_custom_colors"/>
 
-      <com.android.settings.rr.SeekBarPreferenceCham
+      <com.android.settings.bluros.SeekBarPreferenceCham
        android:key="settings_title_text_size"
        android:title="@string/dash_title_text_size"
        android:max="25"

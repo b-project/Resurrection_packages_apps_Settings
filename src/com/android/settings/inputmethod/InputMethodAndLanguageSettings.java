@@ -66,8 +66,8 @@ import com.android.settings.search.Indexable;
 import com.android.settings.search.SearchIndexableRaw;
 
 import com.android.settings.voicewakeup.VoiceWakeupSettings;
-import cyanogenmod.hardware.CMHardwareManager;
-import cyanogenmod.providers.CMSettings;
+import bluros.hardware.CMHardwareManager;
+import bluros.providers.CMSettings;
 
 import java.text.Collator;
 import java.util.ArrayList;
@@ -95,7 +95,7 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
     private static final String KEY_PREVIOUSLY_ENABLED_SUBTYPES = "previously_enabled_subtypes";
     private static final String KEY_HIGH_TOUCH_SENSITIVITY = "high_touch_sensitivity";
     private static final String KEY_TOUCHSCREEN_HOVERING = "touchscreen_hovering";
-    private static final String KEY_TRACKPAD_SETTINGS = "gesture_pad_settings";
+   private static final String KEY_TRACKPAD_SETTINGS = "gesture_pad_settings";
     private static final String KEY_STYLUS_GESTURES = "stylus_gestures";
     private static final String KEY_STYLUS_ICON_ENABLED = "stylus_icon_enabled";
     private static final String KEY_VOICE_CATEGORY = "voice_category";
@@ -230,11 +230,11 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
                         mHardware.get(CMHardwareManager.FEATURE_TOUCH_HOVERING));
             }
 
-            Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
-                            pointerSettingsCategory, KEY_TRACKPAD_SETTINGS);
-            if (pointerSettingsCategory.getPreferenceCount() == 0) {
-                getPreferenceScreen().removePreference(pointerSettingsCategory);
-            }
+           Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
+                           pointerSettingsCategory, KEY_TRACKPAD_SETTINGS);
+          if (pointerSettingsCategory.getPreferenceCount() == 0) {
+               getPreferenceScreen().removePreference(pointerSettingsCategory);
+          }
         }
 
         // Enable or disable mStatusBarImeSwitcher based on boolean: config_show_cmIMESwitcher

@@ -27,7 +27,7 @@ import com.android.settings.DisplaySettings;
 import com.android.settings.HomeSettings;
 import com.android.settings.LegalSettings;
 import com.android.settings.PrivacySettings;
-import com.android.settings.rr.MainSettings;
+import com.android.settings.bluros.MainSettings;
 import com.android.settings.R;
 import com.android.settings.ScreenPinningSettings;
 import com.android.settings.SecuritySettings;
@@ -38,7 +38,7 @@ import com.android.settings.accessibility.AccessibilitySettings;
 import com.android.settings.applications.AdvancedAppSettings;
 import com.android.settings.applications.ManageDefaultApps;
 import com.android.settings.bluetooth.BluetoothSettings;
-import com.android.settings.cyanogenmod.StatusBarSettings;
+import com.android.settings.bluros.StatusBarSettings;
 import com.android.settings.deviceinfo.StorageSettings;
 import com.android.settings.fuelgauge.PowerUsageSummary;
 import com.android.settings.inputmethod.InputMethodAndLanguageSettings;
@@ -51,28 +51,28 @@ import com.android.settings.notification.SoundSettings;
 import com.android.settings.notification.ZenModePrioritySettings;
 import com.android.settings.notification.ZenModeSettings;
 import com.android.settings.print.PrintSettingsFragment;
-import com.android.settings.rr.LockScreenSettings;
-import com.android.settings.rr.MiscSettings;
-import com.android.settings.rr.animation.AnimationSettings;
-import com.android.settings.rr.RecentsSettings;
-import com.android.settings.rr.ClockSettings;
-import com.android.settings.rr.NotificationDrawerSettings;
-import com.android.settings.rr.CustomHeader;
-import com.android.settings.rr.FlingSettings;
-import com.android.settings.rr.Header;
-import com.android.settings.rr.HeaderColors;
-import com.android.settings.rr.HeaderFonts;
-import com.android.settings.rr.LockScreenGestures;
-import com.android.settings.rr.LockScreenMedia;
-import com.android.settings.rr.LockscreenUI;
-import com.android.settings.rr.Navbar;
-import com.android.settings.rr.NotificationColorSettings;
-import com.android.settings.rr.PulseSettings;
-import com.android.settings.rr.QsColors;
-import com.android.settings.rr.QsPanel;
-import com.android.settings.rr.RecentsStyles;
-import com.android.settings.rr.SmartbarSettings;
-import com.android.settings.rr.StatusBarColors;
+import com.android.settings.bluros.LockScreenSettings;
+import com.android.settings.bluros.MiscSettings;
+import com.android.settings.bluros.animation.AnimationSettings;
+import com.android.settings.bluros.RecentsSettings;
+import com.android.settings.bluros.ClockSettings;
+import com.android.settings.bluros.NotificationDrawerSettings;
+import com.android.settings.bluros.CustomHeader;
+import com.android.settings.bluros.FlingSettings;
+import com.android.settings.bluros.Header;
+import com.android.settings.bluros.HeaderColors;
+import com.android.settings.bluros.HeaderFonts;
+import com.android.settings.bluros.LockScreenGestures;
+import com.android.settings.bluros.LockScreenMedia;
+import com.android.settings.bluros.LockscreenUI;
+import com.android.settings.bluros.Navbar;
+import com.android.settings.bluros.NotificationColorSettings;
+import com.android.settings.bluros.PulseSettings;
+import com.android.settings.bluros.QsColors;
+import com.android.settings.bluros.QsPanel;
+import com.android.settings.bluros.RecentsStyles;
+import com.android.settings.bluros.SmartbarSettings;
+import com.android.settings.bluros.StatusBarColors;
 import com.android.settings.sim.SimSettings;
 import com.android.settings.users.UserSettings;
 import com.android.settings.wifi.AdvancedWifiSettings;
@@ -122,7 +122,7 @@ public final class SearchIndexableResources {
                         Ranking.getRankForClassName(MainSettings.class.getName()),
                         NO_DATA_RES_ID,
                         MainSettings.class.getName(),
-                        R.drawable.ic_rr_tools_tint));
+                        R.drawable.ic_bluros_tools_tint));
         sResMap.put(SimSettings.class.getName(),
                 new SearchIndexableResource(
                         Ranking.getRankForClassName(SimSettings.class.getName()),
@@ -345,42 +345,42 @@ public final class SearchIndexableResources {
                         Ranking.getRankForClassName(ButtonSettings.class.getName()),
                         NO_DATA_RES_ID,
                         ButtonSettings.class.getName(),
-                        R.drawable.rr_buttons_icon));
+                        R.drawable.bluros_buttons_icon));
 
         sResMap.put(StatusBarSettings.class.getName(),
                 new SearchIndexableResource(
                         Ranking.getRankForClassName(StatusBarSettings.class.getName()),
                         NO_DATA_RES_ID,
                         StatusBarSettings.class.getName(),
-                        R.drawable.rr_statusbar_icon));
+                        R.drawable.bluros_statusbar_icon));
 
         sResMap.put(LockScreenSettings.class.getName(),
                 new SearchIndexableResource(
                         Ranking.getRankForClassName(LockScreenSettings.class.getName()),
                         NO_DATA_RES_ID,
                         LockScreenSettings.class.getName(),
-                        R.drawable.rr_lock_icon));
+                        R.drawable.bluros_lock_icon));
 
         sResMap.put(MiscSettings.class.getName(),
                 new SearchIndexableResource(
                         Ranking.getRankForClassName(MiscSettings.class.getName()),
                         NO_DATA_RES_ID,
                         MiscSettings.class.getName(),
-                        R.drawable.rr_misc_icon));
+                        R.drawable.bluros_misc_icon));
 
         sResMap.put(AnimationSettings.class.getName(),
                 new SearchIndexableResource(
                         Ranking.getRankForClassName(AnimationSettings.class.getName()),
                         NO_DATA_RES_ID,
                         AnimationSettings.class.getName(),
-                        R.drawable.rr_animations_icon));
+                        R.drawable.bluros_animations_icon));
 
         sResMap.put(RecentsSettings.class.getName(),
                 new SearchIndexableResource(
                         Ranking.getRankForClassName(RecentsSettings.class.getName()),
                         NO_DATA_RES_ID,
                         RecentsSettings.class.getName(),
-                        R.drawable.rr_recents_icon));
+                        R.drawable.bluros_recents_icon));
 
        sResMap.put(ClockSettings.class.getName(),
                 new SearchIndexableResource(
@@ -394,7 +394,7 @@ public final class SearchIndexableResources {
                         Ranking.getRankForClassName(NotificationDrawerSettings.class.getName()),
                         NO_DATA_RES_ID,
                         NotificationDrawerSettings.class.getName(),
-                        R.drawable.rr_notification_drawer_icon));
+                        R.drawable.bluros_notification_drawer_icon));
                         
                         
        sResMap.put(CustomHeader.class.getName(),
@@ -402,42 +402,42 @@ public final class SearchIndexableResources {
                         Ranking.getRankForClassName(CustomHeader.class.getName()),
                         NO_DATA_RES_ID,
                         CustomHeader.class.getName(),
-                        R.drawable.rr_notification_drawer_icon));
+                        R.drawable.bluros_notification_drawer_icon));
                         
        sResMap.put(FlingSettings.class.getName(),
                 new SearchIndexableResource(
                         Ranking.getRankForClassName(FlingSettings.class.getName()),
                         NO_DATA_RES_ID,
                         FlingSettings.class.getName(),
-                        R.drawable.rr_navbar_icon));
+                        R.drawable.bluros_navbar_icon));
       
       sResMap.put(Header.class.getName(),
                 new SearchIndexableResource(
                         Ranking.getRankForClassName(Header.class.getName()),
                         NO_DATA_RES_ID,
                         Header.class.getName(),
-                        R.drawable.rr_notification_drawer_icon));                                                                        
+                        R.drawable.bluros_notification_drawer_icon));                                                                        
                         
        sResMap.put(HeaderColors.class.getName(),
                 new SearchIndexableResource(
                         Ranking.getRankForClassName(HeaderColors.class.getName()),
                         NO_DATA_RES_ID,
                         HeaderColors.class.getName(),
-                        R.drawable.rr_notification_drawer_icon));
+                        R.drawable.bluros_notification_drawer_icon));
                         
        sResMap.put(HeaderFonts.class.getName(),
                 new SearchIndexableResource(
                         Ranking.getRankForClassName(HeaderFonts.class.getName()),
                         NO_DATA_RES_ID,
                         HeaderFonts.class.getName(),
-                        R.drawable.rr_notification_drawer_icon));
+                        R.drawable.bluros_notification_drawer_icon));
       
       sResMap.put(LockScreenGestures.class.getName(),
                 new SearchIndexableResource(
                         Ranking.getRankForClassName(LockScreenGestures.class.getName()),
                         NO_DATA_RES_ID,
                         LockScreenGestures.class.getName(),
-                        R.drawable.rr_lock_icon));
+                        R.drawable.bluros_lock_icon));
                                                 
                         
        sResMap.put(LockScreenMedia.class.getName(),
@@ -445,21 +445,21 @@ public final class SearchIndexableResources {
                         Ranking.getRankForClassName(LockScreenMedia.class.getName()),
                         NO_DATA_RES_ID,
                         LockScreenMedia.class.getName(),
-                        R.drawable.rr_lock_icon));
+                        R.drawable.bluros_lock_icon));
                         
        sResMap.put(LockscreenUI.class.getName(),
                 new SearchIndexableResource(
                         Ranking.getRankForClassName(LockscreenUI.class.getName()),
                         NO_DATA_RES_ID,
                         LockscreenUI.class.getName(),
-                        R.drawable.rr_lock_icon));
+                        R.drawable.bluros_lock_icon));
       
       sResMap.put(Navbar.class.getName(),
                 new SearchIndexableResource(
                         Ranking.getRankForClassName(Navbar.class.getName()),
                         NO_DATA_RES_ID,
                         Navbar.class.getName(),
-                        R.drawable.rr_navbar_icon));
+                        R.drawable.bluros_navbar_icon));
                         
                               
       sResMap.put(NotificationColorSettings.class.getName(),
@@ -467,7 +467,7 @@ public final class SearchIndexableResources {
                         Ranking.getRankForClassName(NotificationColorSettings.class.getName()),
                         NO_DATA_RES_ID,
                         NotificationColorSettings.class.getName(),
-                        R.drawable.rr_notification_drawer_icon));
+                        R.drawable.bluros_notification_drawer_icon));
                         
                               
       sResMap.put(PulseSettings.class.getName(),
@@ -475,14 +475,14 @@ public final class SearchIndexableResources {
                         Ranking.getRankForClassName(PulseSettings.class.getName()),
                         NO_DATA_RES_ID,
                         PulseSettings.class.getName(),
-                         R.drawable.rr_navbar_icon));
+                         R.drawable.bluros_navbar_icon));
                          
     sResMap.put(QsColors.class.getName(),
                 new SearchIndexableResource(
                         Ranking.getRankForClassName(QsColors.class.getName()),
                         NO_DATA_RES_ID,
                         QsColors.class.getName(),
-                        R.drawable.rr_quick_settings_icon));
+                        R.drawable.bluros_quick_settings_icon));
                         
                               
     sResMap.put(QsPanel.class.getName(),
@@ -490,7 +490,7 @@ public final class SearchIndexableResources {
                         Ranking.getRankForClassName(QsPanel.class.getName()),
                         NO_DATA_RES_ID,
                         QsPanel.class.getName(),
-                        R.drawable.rr_quick_settings_icon));
+                        R.drawable.bluros_quick_settings_icon));
                         
                               
       sResMap.put(RecentsStyles.class.getName(),
@@ -498,14 +498,14 @@ public final class SearchIndexableResources {
                         Ranking.getRankForClassName(RecentsStyles.class.getName()),
                         NO_DATA_RES_ID,
                         RecentsStyles.class.getName(),
-                         R.drawable.rr_recents_icon));
+                         R.drawable.bluros_recents_icon));
     
         sResMap.put(SmartbarSettings.class.getName(),
                 new SearchIndexableResource(
                         Ranking.getRankForClassName(SmartbarSettings.class.getName()),
                         NO_DATA_RES_ID,
                         SmartbarSettings.class.getName(),
-                         R.drawable.rr_navbar_icon));
+                         R.drawable.bluros_navbar_icon));
                         
                               
      sResMap.put(StatusBarColors.class.getName(),
@@ -513,7 +513,7 @@ public final class SearchIndexableResources {
                         Ranking.getRankForClassName(StatusBarColors.class.getName()),
                         NO_DATA_RES_ID,
                         StatusBarColors.class.getName(),
-                        R.drawable.rr_quick_settings_icon));
+                        R.drawable.bluros_quick_settings_icon));
     }
 
     private SearchIndexableResources() {

@@ -53,23 +53,23 @@ import android.util.Log;
 
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.widget.LockPatternUtils;
-import com.android.settings.rr.SeekBarPreference;
+import com.android.settings.bluros.SeekBarPreference;
 import com.android.settings.Settings.LockScreenSettingsActivity;
 import com.android.settings.TrustAgentUtils.TrustAgentComponentInfo;
-import com.android.settings.cyanogenmod.LiveLockScreenSettings;
+import com.android.settings.bluros.LiveLockScreenSettings;
 import com.android.settings.fingerprint.FingerprintEnrollIntroduction;
 import com.android.settings.fingerprint.FingerprintSettings;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Index;
 import com.android.settings.search.Indexable;
 import com.android.settings.search.SearchIndexableRaw;
-import cyanogenmod.providers.CMSettings;
+import bluros.providers.CMSettings;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static android.provider.Settings.System.SCREEN_OFF_TIMEOUT;
-import static cyanogenmod.content.Intent.ACTION_OPEN_LIVE_LOCKSCREEN_SETTINGS;
+import static bluros.content.Intent.ACTION_OPEN_LIVE_LOCKSCREEN_SETTINGS;
 
 /**
  * Gesture lock pattern settings.
@@ -134,7 +134,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
 
     private static final int MY_USER_ID = UserHandle.myUserId();
 
-    private static final String LIVE_LOCK_SCREEN_FEATURE = "org.cyanogenmod.livelockscreen";
+    private static final String LIVE_LOCK_SCREEN_FEATURE = "org.bluros.livelockscreen";
 
     private PackageManager mPM;
     private DevicePolicyManager mDPM;
@@ -890,7 +890,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
 
     /**
      * Loads the title and summary for live lock screen preference.  If an external package supports
-     * the {@link cyanogenmod.content.Intent#ACTION_OPEN_LIVE_LOCKSCREEN_SETTINGS} we attempt to
+     * the {@link bluros.content.Intent#ACTION_OPEN_LIVE_LOCKSCREEN_SETTINGS} we attempt to
      * load the title and summary from that package and use defaults if those cannot be loaded or
      * no other package is found to support the action.
      * @param pref

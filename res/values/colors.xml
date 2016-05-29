@@ -18,7 +18,7 @@
 
     <color name="red">#F00</color>
     <color name="blue">#00F</color>
-
+	<color name="black">#000000</color>
     <color name="material_empty_color_light">#FFCED7DB</color>
     <color name="actionbar_icon_color">#ffffff</color>
 
@@ -38,7 +38,7 @@
     <color name="crypt_keeper_clock_am_pm">#ff9a9a9a</color>
     <color name="crypt_keeper_password_background">#70606060</color>
 
-    <color name="divider_color">#20ffffff</color>
+    <color name="divider_color">#f9f5f5</color>
     <color name="title_color">@android:color/holo_blue_light</color>
     <color name="setup_divider_color_dark">#33ffffff</color>
     <color name="setup_divider_color_light">#33000000</color>
@@ -74,7 +74,8 @@
     <color name="running_processes_free_ram">#ffced7db</color>
 
     <color name="card_background">#ffffffff</color>
-
+	<!-- BG Color -->
+    <color name="dashboard_category_title_bg_color">#f9f5f5</color>
     <color name="switchbar_background_color">#ff37474f</color>
     <color name="switch_accent_color">#ff7fcac3</color>
 

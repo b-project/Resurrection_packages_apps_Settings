@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2012-2016 The BlurOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -44,8 +44,8 @@
     <!-- NFC PreferenceCategory title -->
     <string name="nfc_title_category">NFC</string>
 
-    <!-- About phone screen, CyanogenMod version -->
-    <string name="mod_version">CyanogenMod version</string>
+    <!-- About phone screen, BlurOS version -->
+    <string name="mod_version">BlurOS version</string>
     <string name="mod_version_default">Unknown</string>
 
     <!-- About phone screen, Device model -->
@@ -53,8 +53,8 @@
     <!-- About phone screen, Device name -->
     <string name="device_name">Device name</string>
 
-    <!-- About phone screen, CyanogenMod Api Level -->
-    <string name="mod_api_level">CyanogenMod API level</string>
+    <!-- About phone screen, BlurOS Api Level -->
+    <string name="mod_api_level">BlurOS API level</string>
     <string name="mod_api_level_default">Unknown</string>
 
     <!-- About phone screen, build date -->
@@ -700,8 +700,8 @@
     <string name="live_display_color_profile_basic_title">Basic</string>
     <string name="live_display_color_profile_basic_summary">Use the display uncalibrated</string>
 
- <!-- Settings switch for updating Cyanogen recovery -->
-    <string name="update_recovery_title">Update Cyanogen recovery</string>
+ <!-- Settings switch for updating BlurOS recovery -->
+    <string name="update_recovery_title">Update BlurOS recovery</string>
     <string name="update_recovery_summary">Update recovery with system updates</string>
     <string name="update_recovery_on_warning">NOTICE: When this feature is enabled, your installed recovery will be replaced by one included with the current version of the running OS.\n\nYour recovery will be updated along with upgrades to your system, helping to ensure compatibility with future versions.\n\nWould you like to enable this feature?</string>
     <string name="update_recovery_off_warning">WARNING: When this feature is disabled, your installed recovery will not be updated with OS upgrades.\n\nFuture OS updates may not install with outdated or custom recovery versions.\n\nDo you really want to disable this feature?</string>
@@ -857,8 +857,8 @@
     <string name="keep_screen_on_charging">While charging</string>
 
     <!-- Privacy Settings Header item -->
-    <string name="privacy_settings_cyanogenmod_title">Privacy</string>
-    <string name="privacy_settings_cyanogenmod_category" translatable="false">CyanogenMod</string>
+    <string name="privacy_settings_bluros_title">Privacy</string>
+    <string name="privacy_settings_bluros_category" translatable="false">BlurOS</string>
 
     <!-- Privacy Guard -->
     <string name="privacy_guard_default_title">Enabled by default</string>
@@ -1181,8 +1181,8 @@
     <string name="weather_settings_button">Provider settings</string>
     <string name="weather_settings_activity_not_found">Unable to launch the settings menu of this provider</string>
     <string name="weather_settings_add_weather_provider">Add weather provider</string>
-    <string name="weather_settings_play_store_market_url" translatable="false">market://search?q=cyanogenmodweatherprovider&amp;c=apps</string>
-    <string name="weather_settings_play_store_http_url" translatable="false">http://play.google.com/store/search?q=cyanogenmodweatherprovider&amp;c=apps</string>
+    <string name="weather_settings_play_store_market_url" translatable="false">market://search?q=blurosweatherprovider&amp;c=apps</string>
+    <string name="weather_settings_play_store_http_url" translatable="false">http://play.google.com/store/search?q=blurosweatherprovider&amp;c=apps</string>
     <string name="weather_settings_general_settings_title">General</string>
     <string name="weather_settings_providers_title">Providers</string>
     <string name="weather_settings_temp_units_title">Temperature unit</string>

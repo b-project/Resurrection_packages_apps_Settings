@@ -40,7 +40,8 @@
     <com.android.settings.dashboard.DashboardContainerView
             android:id="@+id/category_content"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
+            android:background="@color/dashboard_category_title_bg_color"
             />
 
 </LinearLayout>

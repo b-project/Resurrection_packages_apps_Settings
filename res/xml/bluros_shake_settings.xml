@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:key="shake_clean_recent"
+        android:title="@string/shake_clean_recent_title"
+        android:defaultValue="true" />
+
+    <SwitchPreference
+        android:key="shake_clean_notification"
+        android:title="@string/shake_clean_notification_title"
+        android:defaultValue="true" />
+
+</PreferenceScreen>

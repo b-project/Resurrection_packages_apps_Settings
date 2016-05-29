@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 The CyanogenMod Project
+ * Copyright (C) 2015 The BlurOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,11 +15,11 @@
  */
 package com.android.settings.livedisplay;
 
-import static cyanogenmod.hardware.LiveDisplayManager.FEATURE_CABC;
-import static cyanogenmod.hardware.LiveDisplayManager.FEATURE_COLOR_ENHANCEMENT;
-import static cyanogenmod.hardware.LiveDisplayManager.FEATURE_DISPLAY_MODES;
-import static cyanogenmod.hardware.LiveDisplayManager.MODE_OFF;
-import static cyanogenmod.hardware.LiveDisplayManager.MODE_OUTDOOR;
+import static bluros.hardware.LiveDisplayManager.FEATURE_CABC;
+import static bluros.hardware.LiveDisplayManager.FEATURE_COLOR_ENHANCEMENT;
+import static bluros.hardware.LiveDisplayManager.FEATURE_DISPLAY_MODES;
+import static bluros.hardware.LiveDisplayManager.MODE_OFF;
+import static bluros.hardware.LiveDisplayManager.MODE_OUTDOOR;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -44,16 +44,16 @@ import com.android.settings.Utils;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 
-import org.cyanogenmod.internal.logging.CMMetricsLogger;
+import org.bluros.internal.logging.CMMetricsLogger;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import cyanogenmod.hardware.CMHardwareManager;
-import cyanogenmod.hardware.DisplayMode;
-import cyanogenmod.hardware.LiveDisplayConfig;
-import cyanogenmod.hardware.LiveDisplayManager;
-import cyanogenmod.providers.CMSettings;
+import bluros.hardware.CMHardwareManager;
+import bluros.hardware.DisplayMode;
+import bluros.hardware.LiveDisplayConfig;
+import bluros.hardware.LiveDisplayManager;
+import bluros.providers.CMSettings;
 
 public class LiveDisplay extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
@@ -123,11 +123,11 @@ public class LiveDisplay extends SettingsPreferenceFragment implements
         mLiveDisplay.setValue(String.valueOf(adaptiveMode));
 
         mModeEntries = res.getStringArray(
-                org.cyanogenmod.platform.internal.R.array.live_display_entries);
+                org.bluros.platform.internal.R.array.live_display_entries);
         mModeValues = res.getStringArray(
-                org.cyanogenmod.platform.internal.R.array.live_display_values);
+                org.bluros.platform.internal.R.array.live_display_values);
         mModeSummaries = res.getStringArray(
-                org.cyanogenmod.platform.internal.R.array.live_display_summaries);
+                org.bluros.platform.internal.R.array.live_display_summaries);
 
         // Remove outdoor mode from lists if there is no support
         if (!mConfig.hasFeature(LiveDisplayManager.MODE_OUTDOOR)) {
