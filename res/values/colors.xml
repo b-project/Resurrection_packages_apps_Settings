@@ -18,7 +18,7 @@
 
     <color name="red">#F00</color>
     <color name="blue">#00F</color>
-	<color name="black">#000000</color>
+
     <color name="material_empty_color_light">#FFCED7DB</color>
     <color name="actionbar_icon_color">#ffffff</color>
 
@@ -75,7 +75,7 @@
 
     <color name="card_background">#ffffffff</color>
 	<!-- BG Color -->
-    <color name="dashboard_category_title_bg_color">#f9f5f5</color>
+    <color name="dashboard_category_title_bg_color">#EBEBEB</color> 
     <color name="switchbar_background_color">#ff37474f</color>
     <color name="switch_accent_color">#ff7fcac3</color>
 

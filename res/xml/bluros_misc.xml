@@ -22,6 +22,11 @@
         android:key="misc_1"
         android:title="@string/misc_1" >
 
+ 	<PreferenceScreen
+        android:id="@+id/initD"
+		android:fragment="com.android.settings.broken.InitD"
+		android:title="@string/init_d_title" />
+
     <!-- SELinux -->
         <Preference
             android:key="selinux_switch"
@@ -98,10 +103,6 @@
         android:key="misc_3"
         android:title="@string/misc_3" >
 
- 	<PreferenceScreen
-        android:id="@+id/initD"
-		android:fragment="com.android.settings.broken.InitD"
-		android:title="@string/init_d_title" />
     <com.android.settings.bluros.SystemSettingSwitchPreference
         android:key="disable_fc_notifications"
         android:title="@string/disable_fc_notifications_title"

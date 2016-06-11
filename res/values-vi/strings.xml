@@ -30,6 +30,7 @@
     <string name="bluros_donate">Đóng góp để phát triển</string>
     <string name="bluros_donate_summary">Đóng góp cho nhà phát triển ROM</string>
     <string name="app_name">Init.d Conf</string>
+    <string name="initd_settings">BlurOS Speed là tinh chỉnh bên trong hệ thống, mục tiêu chính của chỉnh là để cải thiện hiệu suất, giảm giật độ trễ, và tăng tuổi thọ pin. Yeu cầu quyền Root và Init.D</string>
     <string name="devs">Nhà phát triển</string>
     <string name="bluros">Liên kết</string>
     <string name="bluros_website_title">Website</string>

@@ -7057,10 +7057,4 @@
     <!-- Toast message letting the user know the color temperature setting is not immediate -->
     <string name="color_temperature_toast">To apply color change, turn off screen</string>
     
-      
-<string name="linhphi_switch_title">BLUR-POP</string>
-<string name="linhphi_switch_summary">BLUR-POP enabled，the navigation bar could be replaced</string>
-<string name="linhphi_fullscreen_title">Hide the navigation bar</string>
-<string name="linhphi_fullscreen_summary">Larger screen area available</string>
-<string name="blur_pop">Navigtion Bar Pop</string>
 </resources>

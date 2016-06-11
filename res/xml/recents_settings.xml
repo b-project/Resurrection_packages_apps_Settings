@@ -85,7 +85,7 @@
             android:entries="@array/immersive_recents_entries"
             android:entryValues="@array/immersive_recents_values"
             android:summary="@string/power_menu_animation_summary"
-            android:persistent="false" />
+            android:persistent="true" />
 
         <com.android.settings.bluros.SystemSettingSwitchPreference
             android:key="recents_full_screen_clock"

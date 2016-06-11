@@ -57,7 +57,7 @@ public class RecentsSettings extends SettingsPreferenceFragment
     // Intent for launching the hidden recents actvity
     public static Intent INTENT_HIDDEN_RECENTS_SETTINGS = new Intent(Intent.ACTION_MAIN)
     .setClassName(HIDDEN_RECENTS_PACKAGE_NAME,
-    HIDDEN_RECENTS_PACKAGE_NAME + ".rr.HAFRAppListActivity"); 
+    HIDDEN_RECENTS_PACKAGE_NAME + ".bluros.HAFRAppListActivity"); 
     
     private SwitchPreference mRecentsClearAll;
     private ListPreference mRecentsClearAllLocation;

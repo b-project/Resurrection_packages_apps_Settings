@@ -60,6 +60,9 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Gravity;
+import android.app.ActionBar.LayoutParams;
+import android.widget.LinearLayout;
 import android.view.LayoutInflater;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -698,10 +701,10 @@ public class SettingsActivity extends Activity
 
         mActionBar = getActionBar();
         if (mActionBar != null) {
-          //  mActionBar.setDisplayHomeAsUpEnabled(mDisplayHomeAsUpEnabled);
-           // mActionBar.setHomeButtonEnabled(mDisplayHomeAsUpEnabled);
-            mActionBar.setDisplayShowCustomEnabled(true); 
-			mActionBar.setCustomView(R.layout.action_bar);
+           mActionBar.setDisplayHomeAsUpEnabled(mDisplayHomeAsUpEnabled);
+           mActionBar.setHomeButtonEnabled(mDisplayHomeAsUpEnabled);
+          // mActionBar.setDisplayShowCustomEnabled(true); 
+		  // mActionBar.setCustomView(R.layout.action_bar);
        }
 
         mSwitchBar = (SwitchBar) findViewById(R.id.switch_bar);

@@ -99,6 +99,17 @@
             android:key="@string/category_key_device"
             android:title="@string/header_category_device" >
 
+        <!-- Gestures -->
+        <dashboard-tile
+            android:id="@+id/device_specific_gesture_settings"
+            android:title="@string/gesture_settings_title"
+            android:icon="@drawable/ic_settings_gestures">
+            <intent
+                android:action="com.bluros.action.LAUNCH_TOUCHSCREEN_GESTURE_SETTINGS"
+                android:targetPackage="com.bluros.settings.device"
+                android:targetClass="com.bluros.settings.device.TouchscreenGestureSettings" />
+        </dashboard-tile>
+
         <!-- Sound -->
         <dashboard-tile
                 android:id="@+id/sound_settings"

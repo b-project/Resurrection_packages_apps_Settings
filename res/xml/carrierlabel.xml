@@ -47,7 +47,7 @@
         android:title="@string/status_bar_carrier_size"
         android:max="23"
         settings:minimum="4"
-        settings:defaultVal="14"
+        settings:defaultVal="18"
         settings:unitsLeft=""
         settings:unitsRight="dp" />
 

@@ -59,13 +59,13 @@
             android:title="@string/navigation_bar_size_title" />
 
     </PreferenceCategory>
-    
+ <!--   
             <Preference
              android:title="@string/blur_pop">
              <intent
                  android:action="android.intent.action.MAIN"
                  android:targetPackage="com.bluros.vipop"
                  android:targetClass="com.bluros.vipop.MainActivity" />
-        </Preference>
+        </Preference>  -->
 
 </PreferenceScreen>

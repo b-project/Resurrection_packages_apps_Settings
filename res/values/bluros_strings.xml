@@ -2086,7 +2086,8 @@
     
     <!-- Init.d -->
     <string name="header_summary_init_d">@null</string>
-    <string name="init_d_title">BlurOS Tweaks</string>
+    <string name="initd_settings">BlurOS Speed is a modification that combines tweaks inside an intuitive application, the main goal of the tweaks is to improve performance, reduce stutters and lags, and expands battery life.The mod will and should work on any device that meets its minimum requirement. You only need a rooted and init.d Android device</string>
+    <string name="init_d_title">BlurOS Speed</string>
     <string name="app_name">BlurOS Tweaks</string>
     <string name="pt_general">General</string>
     <string name="pt_zipalign_apks">Zipalign apps</string>
@@ -2145,9 +2146,9 @@
     <string name="db_exit">Exit</string>
 
     <!-- Swipe Back Layout -->
-    <string name="title_swipe_back_layout">Vuốt cạnh để quay lại</string>
-    <string name="swipe_back_layout_enable_title">Bật chức năng</string>
-    <string name="swipe_back_layout_enable_summary">Bật hoặc tắt chức năng vuốt</string>
+    <string name="title_swipe_back_layout">Swipe Back</string>
+    <string name="swipe_back_layout_enable_title">Enable</string>
+    <string name="swipe_back_layout_enable_summary">Enable / Disable Swipeback</string>
     <string name="swipe_back_layout_edge_title">Track Edge</string>
     <string name="swipe_back_layout_edge_summary">Select an edge to track for swipe back gesture</string>
     <string name="swipe_back_layout_edge_left">Left</string>

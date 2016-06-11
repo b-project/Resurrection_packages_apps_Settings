@@ -107,18 +107,18 @@ public class MainSettings extends SettingsPreferenceFragment {
 
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
-            frags[0] = new About();
-            frags[1] = new StatusBarSettings();
-            frags[2] = new NotificationDrawerSettings();
-            frags[3] = new QsPanel();
-            frags[4] = new Navbar();
-            frags[5] = new ButtonSettings();
-            frags[6] = new RecentsSettings();
-            frags[7] = new LockScreenSettings();
-	    frags[8] = new RRGestures();
-            frags[9] = new MultiFragment();
-            frags[10] = new MiscSettings();
-            frags[11] = new AnimationSettings();
+            frags[0] = new StatusBarSettings();
+            frags[1] = new NotificationDrawerSettings();
+            frags[2] = new QsPanel();
+            frags[3] = new Navbar();
+            frags[4] = new ButtonSettings();
+            frags[5] = new RecentsSettings();
+            frags[6] = new LockScreenSettings();
+			frags[7] = new RRGestures();
+            frags[8] = new MultiFragment();
+            frags[9] = new MiscSettings();
+            frags[10] = new AnimationSettings();
+            frags[11] = new About();
         }
 
         @Override
@@ -140,7 +140,6 @@ public class MainSettings extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
-		    getString(R.string.about_bluros_settings_title),
                     getString(R.string.status_bar_title),
                     getString(R.string.notification_drawer_title),
                     getString(R.string.bluros_qs_title),
@@ -149,9 +148,10 @@ public class MainSettings extends SettingsPreferenceFragment {
                     getString(R.string.recents_settings_title),
                     getString(R.string.bluros_lockscreen_title),
                     getString(R.string.gestures_settings),
-		    getString(R.string.multitasking_settings),
+					getString(R.string.multitasking_settings),
                     getString(R.string.bluros_misc_title),
                     getString(R.string.animation_title),
+                    getString(R.string.about_bluros_settings_title),
                     
                     };
         return titleString;
