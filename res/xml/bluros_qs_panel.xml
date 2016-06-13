@@ -52,6 +52,20 @@
          android:entryValues="@array/qs_tile_animation_duration_values"
          android:persistent="false" />
        
+	<ListPreference
+        android:key="sysui_qs_num_rows"
+        android:title="@string/qs_num_rows_title"
+        android:entries="@array/qs_num_rows_entries"
+        android:entryValues="@array/qs_num_rows_values"
+        android:persistent="false" />
+       
+     <ListPreference
+        android:key="sysui_qs_num_columns"
+        android:title="@string/qs_num_columns_title"
+        android:entries="@array/qs_num_columns_entries"
+        android:entryValues="@array/qs_num_columns_values"
+        android:persistent="false" />
+
     <!-- Qs Vibrate Panel -->
     <PreferenceScreen
             android:id="@+id/qs_vib_customizations"

@@ -2170,5 +2170,8 @@
  <!-- Battery fully charged notification -->
      <string name="battery_fully_charged_notif_title">Battery fully charged notification</string>
      <string name="battery_fully_charged_notif_summary">Show a notification when the battery is fully charged</string>
+     
+	<string name="qs_num_rows_title">Number of QS rows</string>
+    <string name="qs_num_rows_showing">%1$s rows are shown</string>
 
 </resources>

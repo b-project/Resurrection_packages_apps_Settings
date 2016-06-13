@@ -19,6 +19,7 @@ package com.android.settings.bluros;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.preference.ListPreference;
@@ -47,7 +48,8 @@ public class QsPanel extends SettingsPreferenceFragment  implements Preference.O
  private static final String PREF_BLOCK_ON_SECURE_KEYGUARD = "block_on_secure_keyguard";
  private static final String STATUS_BAR_QUICK_QS_PULLDOWN = "qs_quick_pulldown";
  private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
- private static final String PREF_NUM_COLUMNS = "sysui_qs_num_columns";
+ private static final String PREF_QS_NUM_TILE_COLUMNS = "sysui_qs_num_columns";
+ private static final String PREF_QS_NUM_TILE_ROWS = "sysui_qs_num_rows";
  private static final String PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
  private static final String PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
 
@@ -57,7 +59,8 @@ public class QsPanel extends SettingsPreferenceFragment  implements Preference.O
     private ListPreference mNumColumns;	
     private ListPreference mTileAnimationStyle;
     private ListPreference mTileAnimationDuration;
-    	
+    private ListPreference mNumRows;
+    private ContentResolver mResolver;
     private static final int MY_USER_ID = UserHandle.myUserId();
     @Override
     public void onCreate(Bundle icicle) {
@@ -69,7 +72,7 @@ public class QsPanel extends SettingsPreferenceFragment  implements Preference.O
 
         Resources res = getResources();
 	mQuickPulldown = (ListPreference) findPreference(STATUS_BAR_QUICK_QS_PULLDOWN);
-int quickPulldown = CMSettings.System.getInt(resolver,
+	int quickPulldown = CMSettings.System.getInt(resolver,
                 CMSettings.System.STATUS_BAR_QUICK_QS_PULLDOWN, 1);
         mQuickPulldown.setValue(String.valueOf(quickPulldown));
         if (quickPulldown == 0) {
@@ -95,12 +98,29 @@ int quickPulldown = CMSettings.System.getInt(resolver,
             }
 
         mSmartPulldown = (ListPreference) findPreference(PREF_SMART_PULLDOWN);
-        mSmartPulldown.setOnPreferenceChangeListener(this);
+        mSmartPulldown.setOnPreferenceChangeListener(this); 
         int smartPulldown = Settings.System.getInt(resolver,
                 Settings.System.QS_SMART_PULLDOWN, 0);
         mSmartPulldown.setValue(String.valueOf(smartPulldown));
         updateSmartPulldownSummary(smartPulldown);
-        
+		// Number of QS Columns 3,4,5
+            mNumColumns = (ListPreference) findPreference(PREF_QS_NUM_TILE_COLUMNS);
+            int numColumns = Settings.System.getIntForUser(mResolver,
+                    Settings.System.QS_NUM_TILE_COLUMNS, getDefaultNumColumns(),
+                    UserHandle.USER_CURRENT);
+            mNumColumns.setValue(String.valueOf(numColumns));
+            updateNumColumnsSummary(numColumns);
+            mNumColumns.setOnPreferenceChangeListener(this);
+                
+            // Number of QS Rows 3,4
+            mNumRows = (ListPreference) findPreference(PREF_QS_NUM_TILE_ROWS);
+            int numRows = Settings.System.getIntForUser(mResolver,
+                    Settings.System.QS_NUM_TILE_ROWS, getDefaultNumRows(),
+                    UserHandle.USER_CURRENT);
+            mNumRows.setValue(String.valueOf(numRows));
+            updateNumRowsSummary(numRows);
+            mNumRows.setOnPreferenceChangeListener(this);
+                    
          mTileAnimationStyle = (ListPreference) findPreference(PREF_TILE_ANIM_STYLE);
          int tileAnimationStyle = Settings.System.getIntForUser(getContentResolver(),
                  Settings.System.ANIM_TILE_STYLE, 0,
@@ -159,6 +179,20 @@ int quickPulldown = CMSettings.System.getInt(resolver,
             Settings.System.putInt(resolver, Settings.System.QS_SMART_PULLDOWN, smartPulldown);
             updateSmartPulldownSummary(smartPulldown);
             return true;
+            } else if (preference == mNumRows) {
+                int numRows = Integer.valueOf((String) newValue);
+                Settings.System.putIntForUser(mResolver,
+                        Settings.System.QS_NUM_TILE_ROWS,
+                        numRows, UserHandle.USER_CURRENT);
+                updateNumRowsSummary(numRows);
+                return true;
+            } else if (preference == mNumColumns) {
+                int numColumns = Integer.valueOf((String) newValue);
+                Settings.System.putIntForUser(mResolver,
+                        Settings.System.QS_NUM_TILE_COLUMNS,
+                        numColumns, UserHandle.USER_CURRENT);
+                updateNumColumnsSummary(numColumns);
+                return true;
          } else if (preference == mTileAnimationStyle) {
              int tileAnimationStyle = Integer.valueOf((String) newValue);
              Settings.System.putIntForUser(getContentResolver(), Settings.System.ANIM_TILE_STYLE,
@@ -201,13 +235,13 @@ int quickPulldown = CMSettings.System.getInt(resolver,
         }
     }
     
-      private void updateNumColumnsSummary(int numColumns) {
+     private void updateNumColumnsSummary(int numColumns) {
             String prefix = (String) mNumColumns.getEntries()[mNumColumns.findIndexOfValue(String
                     .valueOf(numColumns))];
             mNumColumns.setSummary(getResources().getString(R.string.qs_num_columns_showing, prefix));
         }
         
-            private void updateTileAnimationStyleSummary(int tileAnimationStyle) {
+     private void updateTileAnimationStyleSummary(int tileAnimationStyle) {
          String prefix = (String) mTileAnimationStyle.getEntries()[mTileAnimationStyle.findIndexOfValue(String
                  .valueOf(tileAnimationStyle))];
          mTileAnimationStyle.setSummary(getResources().getString(R.string.qs_set_animation_style, prefix));
@@ -217,6 +251,26 @@ int quickPulldown = CMSettings.System.getInt(resolver,
          String prefix = (String) mTileAnimationDuration.getEntries()[mTileAnimationDuration.findIndexOfValue(String
                  .valueOf(tileAnimationDuration))];
          mTileAnimationDuration.setSummary(getResources().getString(R.string.qs_set_animation_duration, prefix));
+     }
+     
+	private void updateNumRowsSummary(int numRows) {
+            String prefix = (String) mNumRows.getEntries()[mNumRows.findIndexOfValue(String
+                    .valueOf(numRows))];
+            mNumRows.setSummary(getResources().getString(R.string.qs_num_rows_showing, prefix));
+        }
+     
+
+    private int getDefaultNumColumns() {
+            try {
+                Resources res = getActivity().getPackageManager()
+                        .getResourcesForApplication("com.android.systemui");
+                int val = res.getInteger(res.getIdentifier("quick_settings_num_columns", "integer",
+                        "com.android.systemui")); // better not be larger than 5, that's as high as the
+                                                  // list goes atm
+                return Math.max(1, val);
+            } catch (Exception e) {
+                return 3;
+            }
      }
  
      private void updateAnimTileDuration(int tileAnimationStyle) {
@@ -228,21 +282,20 @@ int quickPulldown = CMSettings.System.getInt(resolver,
              }
          }
      }
-
-        private int getDefaultNumColums() {
+     
+        private int getDefaultNumRows() {
             try {
                 Resources res = getActivity().getPackageManager()
                         .getResourcesForApplication("com.android.systemui");
-                int val = res.getInteger(res.getIdentifier("quick_settings_num_columns", "integer",
-                        "com.android.systemui")); // better not be larger than 5, that's as high as the
+                int val = res.getInteger(res.getIdentifier("quick_settings_num_rows", "integer",
+                        "com.android.systemui")); // better not be larger than 4, that's as high as the
                                                   // list goes atm
                 return Math.max(1, val);
             } catch (Exception e) {
                 return 3;
             }
         }
-        
-            
+                    
     	    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
             new BaseSearchIndexProvider() {
                 @Override

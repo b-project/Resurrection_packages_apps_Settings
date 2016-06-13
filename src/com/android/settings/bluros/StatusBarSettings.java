@@ -68,13 +68,13 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         implements OnPreferenceChangeListener, Indexable {
 
     private static final String TAG = "StatusBar";
-  
+ /* 
     private static final String SHOW_FOURG = "show_fourg";
     private static final String SHOW_THREEG = "show_threeg";	
     private SwitchPreference mShowFourG;
     private SwitchPreference mShowThreeG;	
 
-    
+    */
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
 
@@ -117,7 +117,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
             Log.e(TAG, "can't access systemui resources",e);
             return null;
         }
-
+/*
 	mShowFourG = (SwitchPreference) findPreference(SHOW_FOURG);
         if (RRUtils.isWifiOnly(getActivity())) {
             prefSet.removePreference(mShowFourG);
@@ -132,7 +132,8 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         } else {
         mShowThreeG.setChecked((Settings.System.getInt(resolver,
                 Settings.System.SHOW_THREEG, 0) == 1));
-        }
+        } 
+        */
         mStatusBarBattery = (ListPreference) findPreference(STATUS_BAR_BATTERY_STYLE);
         mStatusBarBatteryShowPercent =
                 (ListPreference) findPreference(STATUS_BAR_SHOW_BATTERY_PERCENT);
@@ -196,18 +197,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if  (preference == mShowFourG) {
-            boolean checked = ((SwitchPreference)preference).isChecked();
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.SHOW_FOURG, checked ? 1:0);
-            return true;
-        } else if  (preference == mShowThreeG) {
-            boolean checked = ((SwitchPreference)preference).isChecked();
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.SHOW_THREEG, checked ? 1:0);
-            return true;
-        }
-        return super.onPreferenceTreeClick(preferenceScreen, preference);
+        return super.onPreferenceTreeClick(preferenceScreen, preference); 
     }
 
    

@@ -144,7 +144,7 @@
         android:summaryOff="@string/su_indicator_summary_off"
         android:defaultValue="true" />
 
-        <SwitchPreference
+ <!--       <SwitchPreference
             android:key="show_fourg"
             android:title="@string/show_fourg_title"
             android:summary="@string/show_fourg_summary"
@@ -154,7 +154,7 @@
             android:key="show_threeg"
             android:title="@string/show_threeg_title"
             android:summary="@string/show_threeg_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false" /> -->
 
      </PreferenceCategory>
      <PreferenceCategory
