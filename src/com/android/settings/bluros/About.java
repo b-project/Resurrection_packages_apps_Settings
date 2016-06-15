@@ -55,6 +55,7 @@ import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
 import android.view.IWindowManager;
 import android.view.Display;
+import android.view.View;
 import android.view.Window;
 import android.widget.Toast;
 import java.util.regex.Matcher;
@@ -66,6 +67,7 @@ import java.util.Arrays;
 import java.util.Collections;
 
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.bluros.dialog.AndroidLDialog;
 import com.android.settings.R;
 import com.android.settings.Utils;
 import com.android.internal.logging.MetricsLogger;    
@@ -73,7 +75,7 @@ public class About extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 			
 public static final String TAG = "About";
-    
+    AndroidLDialog androidLDialog;
     
     Preference mSiteUrl;
     Preference mForumUrl;
@@ -108,6 +110,7 @@ public static final String TAG = "About";
 
             devsGroup.addPreference(p);
         }
+        dialogExample();
     }
 
     @Override
@@ -135,6 +138,46 @@ public static final String TAG = "About";
     }
          return true; 
     }
+    
+    private void dialogExample() {
+        androidLDialog = new AndroidLDialog.Builder(About.this.getActivity())
+                //settings title
+                .Title("Donate team!")
+                        //settings message
+                .Message("If you like we work, you can donate to the group to maintain and develop team. ! Thank everyone!.")
+                        //adding positive (right) button
+                .setPositiveButton("Donate", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        androidLDialog.hide();
+                    }
+                })
+                        //adding negative (center) button
+                .setNegativeButton("Later", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        androidLDialog.hide();
+                    }
+                })
+                        //showing the dialog!
+                .show();
+
+        //optional.. setting icon but it's not very android l like
+        //androidLDialog.setIcon(R.drawable.ic_launcher);
+        /**
+         * Try out functions like
+         *         androidLDialog.getTitle();
+         *         androidLDialog.setMessageTextSize(CUSTOM_SIZE);
+         *         androidLDialog.setTitleTextSize(CUSTOM_SIZE);
+         *         androidLDialog.getMessage();
+         *         androidLDialog.setMessageColor(android.R.color.black);
+         *         androidLDialog.setTitleColor(android.R.color.black);
+         *         androidLDialog.setBackground(R.drawable.someBackground);
+         *
+         *         SEE ALL FEATURES OF THIS LIBRARY IN THE README
+         */
+    }
+    
     private void launchUrl(String url) {
         Uri uriUrl = Uri.parse(url);
         Intent donate = new Intent(Intent.ACTION_VIEW, uriUrl);

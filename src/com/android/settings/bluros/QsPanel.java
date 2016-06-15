@@ -48,7 +48,7 @@ public class QsPanel extends SettingsPreferenceFragment  implements Preference.O
  private static final String PREF_BLOCK_ON_SECURE_KEYGUARD = "block_on_secure_keyguard";
  private static final String STATUS_BAR_QUICK_QS_PULLDOWN = "qs_quick_pulldown";
  private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
- private static final String PREF_QS_NUM_TILE_COLUMNS = "sysui_qs_num_columns";
+ private static final String PREF_NUM_COLUMNS = "sysui_qs_num_columns";
  private static final String PREF_QS_NUM_TILE_ROWS = "sysui_qs_num_rows";
  private static final String PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
  private static final String PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
@@ -60,7 +60,6 @@ public class QsPanel extends SettingsPreferenceFragment  implements Preference.O
     private ListPreference mTileAnimationStyle;
     private ListPreference mTileAnimationDuration;
     private ListPreference mNumRows;
-    private ContentResolver mResolver;
     private static final int MY_USER_ID = UserHandle.myUserId();
     @Override
     public void onCreate(Bundle icicle) {
@@ -104,9 +103,9 @@ public class QsPanel extends SettingsPreferenceFragment  implements Preference.O
         mSmartPulldown.setValue(String.valueOf(smartPulldown));
         updateSmartPulldownSummary(smartPulldown);
 		// Number of QS Columns 3,4,5
-            mNumColumns = (ListPreference) findPreference(PREF_QS_NUM_TILE_COLUMNS);
-            int numColumns = Settings.System.getIntForUser(mResolver,
-                    Settings.System.QS_NUM_TILE_COLUMNS, getDefaultNumColumns(),
+         mNumColumns = (ListPreference) findPreference(PREF_NUM_COLUMNS);
+         int numColumns = Settings.System.getIntForUser(resolver,
+                    Settings.System.QS_NUM_TILE_COLUMNS, getDefaultNumColums(),
                     UserHandle.USER_CURRENT);
             mNumColumns.setValue(String.valueOf(numColumns));
             updateNumColumnsSummary(numColumns);
@@ -114,7 +113,7 @@ public class QsPanel extends SettingsPreferenceFragment  implements Preference.O
                 
             // Number of QS Rows 3,4
             mNumRows = (ListPreference) findPreference(PREF_QS_NUM_TILE_ROWS);
-            int numRows = Settings.System.getIntForUser(mResolver,
+            int numRows = Settings.System.getIntForUser(resolver,
                     Settings.System.QS_NUM_TILE_ROWS, getDefaultNumRows(),
                     UserHandle.USER_CURRENT);
             mNumRows.setValue(String.valueOf(numRows));
@@ -181,15 +180,14 @@ public class QsPanel extends SettingsPreferenceFragment  implements Preference.O
             return true;
             } else if (preference == mNumRows) {
                 int numRows = Integer.valueOf((String) newValue);
-                Settings.System.putIntForUser(mResolver,
+                Settings.System.putIntForUser(resolver,
                         Settings.System.QS_NUM_TILE_ROWS,
                         numRows, UserHandle.USER_CURRENT);
                 updateNumRowsSummary(numRows);
                 return true;
             } else if (preference == mNumColumns) {
                 int numColumns = Integer.valueOf((String) newValue);
-                Settings.System.putIntForUser(mResolver,
-                        Settings.System.QS_NUM_TILE_COLUMNS,
+                Settings.System.putIntForUser(resolver, Settings.System.QS_NUM_TILE_COLUMNS,
                         numColumns, UserHandle.USER_CURRENT);
                 updateNumColumnsSummary(numColumns);
                 return true;
@@ -260,7 +258,7 @@ public class QsPanel extends SettingsPreferenceFragment  implements Preference.O
         }
      
 
-    private int getDefaultNumColumns() {
+     private int getDefaultNumColums() {
             try {
                 Resources res = getActivity().getPackageManager()
                         .getResourcesForApplication("com.android.systemui");

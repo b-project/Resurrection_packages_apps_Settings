@@ -2174,4 +2174,11 @@
 	<string name="qs_num_rows_title">Number of QS rows</string>
     <string name="qs_num_rows_showing">%1$s rows are shown</string>
 
+<!-- Donate BlurOS -->
+    <string name="dialog_text">If you like we work, you can donate to the group to maintain and develop team. ! Thank everyone!</string>
+    <string name="rate">Donate</string>
+    <string name="remind">Reming me later</string>
+    <string name="no">No thanks</string>
+	<string name="dontask">Do not ask again</string>
+
 </resources>
