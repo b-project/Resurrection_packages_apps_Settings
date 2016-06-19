@@ -95,7 +95,6 @@ import com.android.settings.bluetooth.BluetoothSettings;
 import com.android.settings.contributors.ContributorsCloudFragment;
 import com.android.settings.bluros.DisplayRotation;
 import com.android.settings.bluros.LiveLockScreenSettings;
-import com.android.settings.bluros.WeatherServiceSettings;
 import com.android.settings.dashboard.DashboardCategory;
 import com.android.settings.dashboard.DashboardSummary;
 import com.android.settings.dashboard.DashboardTile;
@@ -154,8 +153,6 @@ import com.android.settings.wifi.SavedAccessPointsWifiSettings;
 import com.android.settings.wifi.WifiSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
 
-
-import bluros.app.CMContextConstants;
 import com.android.settings.slim.fragments.DozeSettingsFragment;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -412,8 +409,7 @@ public class SettingsActivity extends Activity
             DozeSettingsFragment.class.getName(),
             FlingSettings.class.getName(),
             SmartbarSettings.class.getName(),
-            PulseSettings.class.getName(),
-            WeatherServiceSettings.class.getName()
+            PulseSettings.class.getName()
     };
 
 
@@ -1372,7 +1368,7 @@ public class SettingsActivity extends Activity
                     if (!supported) {
                         removeTile = true;
                     }
-		 }else if (id == R.id.kernel_adiutor) {
+					}else if (id == R.id.kernel_adiutor) {
                     boolean supported = false;
                     try {
                         supported = (getPackageManager().getPackageInfo("com.grarak.kerneladiutor", 0).versionCode > 0);
@@ -1381,14 +1377,6 @@ public class SettingsActivity extends Activity
                     if (!supported) {
                         removeTile = true;
                    }
-                } else if (id == R.id.weather_settings) {
-                    final boolean showWeatherMenu = getResources()
-                            .getBoolean(R.bool.config_showWeatherMenu);
-
-                    if (!getPackageManager().hasSystemFeature(
-                            CMContextConstants.Features.WEATHER_SERVICES) || !showWeatherMenu) {
-                        removeTile = true;
-                    }
                 }
 
                 if (UserHandle.MU_ENABLED && UserHandle.myUserId() != 0
