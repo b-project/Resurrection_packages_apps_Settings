@@ -68,6 +68,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.SearchView;
+import android.widget.TextView;
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.util.ArrayUtils;
 import com.android.internal.util.XmlUtils;
@@ -703,8 +704,9 @@ public class SettingsActivity extends Activity
         if (mActionBar != null) {
            mActionBar.setDisplayHomeAsUpEnabled(mDisplayHomeAsUpEnabled);
            mActionBar.setHomeButtonEnabled(mDisplayHomeAsUpEnabled);
-          // mActionBar.setDisplayShowCustomEnabled(true); 
-		  // mActionBar.setCustomView(R.layout.action_bar);
+           //mActionBar.setDisplayShowTitleEnabled(false);
+           //mActionBar.setDisplayShowCustomEnabled(true); 
+		   //mActionBar.setCustomView(R.layout.action_bar);
        }
 
         mSwitchBar = (SwitchBar) findViewById(R.id.switch_bar);

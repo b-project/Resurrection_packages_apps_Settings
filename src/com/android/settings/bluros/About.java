@@ -70,11 +70,13 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.bluros.dialog.AndroidLDialog;
 import com.android.settings.R;
 import com.android.settings.Utils;
+import android.content.pm.PackageManager;
 import com.android.internal.logging.MetricsLogger;    
 public class About extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 			
 public static final String TAG = "About";
+private static final String PROKEY = "com.bluros.";
     AndroidLDialog androidLDialog;
     
     Preference mSiteUrl;
@@ -95,22 +97,15 @@ public static final String TAG = "About";
         mSourceUrl = findPreference("bluros_source");
         mFacebookUrl = findPreference("bluros_facebook");
         mDonateUrl = findPreference("bluros_donate");
-        mGoogleUrl = findPreference("bluros_google_plus");
-        PreferenceGroup devsGroup = (PreferenceGroup) findPreference("devs");
-        ArrayList<Preference> devs = new ArrayList<Preference>();
-        for (int i = 0; i < devsGroup.getPreferenceCount(); i++) {
-            devs.add(devsGroup.getPreference(i));
-        }
-        devsGroup.removeAll();
-        devsGroup.setOrderingAsAdded(false);
-        Collections.shuffle(devs);
-        for(int i = 0; i < devs.size(); i++) {
-            Preference p = devs.get(i);
-            p.setOrder(i);
-
-            devsGroup.addPreference(p);
-        }
-        dialogExample();
+        mGoogleUrl = findPreference("bluros_google_plus");                  
+        // BlurOS Check Key
+        if(isAppInstalled("com.bluros.pro")){
+		//app installed
+		}
+		else{
+			dialogExample();
+		}		
+        
     }
 
     @Override
@@ -142,13 +137,16 @@ public static final String TAG = "About";
     private void dialogExample() {
         androidLDialog = new AndroidLDialog.Builder(About.this.getActivity())
                 //settings title
-                .Title("Donate team!")
+                .Title("Donate")
                         //settings message
-                .Message("If you like we work, you can donate to the group to maintain and develop team. ! Thank everyone!.")
+                .Message("You can support ROM development by donating to Team BlurOS. To make a donation just press the Donate button and buy BlurOS PRO Key. After installing the key, this message will not appear again.")
                         //adding positive (right) button
                 .setPositiveButton("Donate", new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+						Uri uri=Uri.parse("https://play.google.com/store/apps/details?id=com.bluros.pro");
+						Intent i=new Intent(Intent.ACTION_VIEW,uri);
+						startActivity(i);
                         androidLDialog.hide();
                     }
                 })
@@ -177,6 +175,18 @@ public static final String TAG = "About";
          *         SEE ALL FEATURES OF THIS LIBRARY IN THE README
          */
     }
+    
+	private boolean isAppInstalled(String uri) {
+		PackageManager pm = getPackageManager();
+		boolean installed = false;
+		try {
+		pm.getPackageInfo(uri, PackageManager.GET_ACTIVITIES);
+		installed = true;
+		} catch (PackageManager.NameNotFoundException e) {
+		installed = false;
+		}
+		return installed;
+	}
     
     private void launchUrl(String url) {
         Uri uriUrl = Uri.parse(url);

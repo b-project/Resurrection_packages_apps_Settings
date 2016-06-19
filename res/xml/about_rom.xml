@@ -4,7 +4,11 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/about_bluros_settings_title"
 	xmlns:bluros="http://schemas.android.com/apk/res/com.android.settings">
-                
+
+        <PreferenceScreen android:key="bluros_logo"
+                android:enabled="false"
+                android:layout="@layout/bluros_rom_logo" />
+               
  	<PreferenceCategory
 		android:key="links"
 		android:title="@string/rr"> 
@@ -37,7 +41,7 @@
                 			
 </PreferenceCategory>
 				
-	<PreferenceCategory
+<!--	<PreferenceCategory
 		android:key="devs"
 		android:title="@string/dev_categorie_title">
 
@@ -48,6 +52,6 @@
             bluros:donateLink="@string/github_bluros_"
             bluros:emailDev="xdavn.vn@gmail.com"/>
 
-</PreferenceCategory>             
+</PreferenceCategory>              -->
 
 </PreferenceScreen>

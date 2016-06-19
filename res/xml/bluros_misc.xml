@@ -22,11 +22,6 @@
         android:key="misc_1"
         android:title="@string/misc_1" >
 
- 	<PreferenceScreen
-        android:id="@+id/initD"
-		android:fragment="com.android.settings.broken.InitD"
-		android:title="@string/init_d_title" />
-
     <!-- SELinux -->
         <Preference
             android:key="selinux_switch"
@@ -80,8 +75,6 @@
            </intent>
        </Preference>
 
-
-
 </PreferenceCategory>
 
 
@@ -98,7 +91,6 @@
 
 </PreferenceCategory>
 
-
     <PreferenceCategory
         android:key="misc_3"
         android:title="@string/misc_3" >
@@ -114,7 +106,6 @@
             android:id="@+id/system_app_remover"
             android:title="@string/system_app_remover"
             android:fragment="com.android.settings.bluros.fragments.SystemappRemover" />
-
 
         <!-- Advanced options -->
         <PreferenceScreen
